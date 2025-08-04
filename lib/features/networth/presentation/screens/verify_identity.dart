@@ -12,7 +12,7 @@ class _VerifyIdentityState extends State<VerifyIdentity> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Identity Screen'),
+        title: Text('Identity Screen completed'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
