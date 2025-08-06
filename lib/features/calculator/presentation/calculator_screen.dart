@@ -11,19 +11,31 @@ class CalculatorScreen extends ConsumerWidget {
     final expression = ref.watch(CalculatorProvider);
 
     return Scaffold(
-      body: SafeArea(
+      body: Container(
         child: Column(
           children: [
             // Display
             Expanded(
               child: Container(
+                decoration: BoxDecoration(
+                 color: Colors.grey[200],
+                 borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                  ),
+                ),
                 alignment: Alignment.bottomRight,
                 padding: const EdgeInsets.all(24),
+                // color: Colors.grey[300],
                 child: SingleChildScrollView(
                   reverse: true,
                   child: Text(
                     expression,
-                    style: Theme.of(context).textTheme.headlineLarge,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 60,
+                    ),
+                    
                   ),
                 ),
               ),

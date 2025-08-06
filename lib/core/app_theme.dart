@@ -4,7 +4,7 @@ class AppTheme{
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     primaryColor: Colors.tealAccent,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: Colors.white,
     textTheme: TextTheme(
       headlineLarge: TextStyle(
         fontSize: 48,
