@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:task_manager_app/features/networth/presentation/screens/assets_screen.dart';
-import 'package:task_manager_app/features/networth/presentation/screens/verify_identity.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod/riverpod.dart';
+import 'core/app_theme.dart';
+import 'features/calculator/presentation/calculator_screen.dart';
 
-void main(){
-  runApp(Myapp());
+void main() {
+  runApp(ProviderScope(child: MyApp()));
 }
 
-class Myapp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home:VerifyIdentity(),
+      title: 'Classic Calculator',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.darkTheme,
+      home: CalculatorScreen(),
     );
   }
 }
